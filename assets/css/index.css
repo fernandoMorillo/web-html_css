@@ -1,0 +1,151 @@
+:root {
+  --main-bg-color: #4c58e0;
+  --second-bg-color: #fff;
+  --main-text-color: #fff;
+  --second-text-color: #4c58e0;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Comfortaa", cursive;
+}
+
+body {
+  background-color: var(--main-bg-color);
+  height: 100vh;
+  background-image: url(/assets/imagenes/image-header-top.png);
+  background-repeat: no-repeat;
+  background-size: 120px;
+}
+
+.imgtop {
+  height: 215px;
+}
+
+section {
+  display: flex;
+}
+
+.is-medium {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.is-medium > div {
+  width: 70%;
+}
+
+.is-medium-half {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+}
+
+.is-medium-half > img {
+  max-height: 480px;
+  padding-top: 45px;
+}
+
+h1 {
+  color: var(--main-text-color);
+  font-size: 2.5rem;
+  padding-bottom: 10px;
+  padding-top: 77px;
+}
+
+p {
+  color: var(--main-text-color);
+  padding-bottom: 15px;
+  line-height: 22px;
+}
+
+button {
+  border-radius: 150px;
+  background-color: var(--second-bg-color);
+  color: var(--main-bg-color);
+  width: 105px;
+  height: 29px;
+  border: none;
+  text-shadow: 0 0 white;
+  box-shadow: 0 0 14px -5px white;
+  cursor: pointer;
+  transition: 0.4s all ease-in-out;
+}
+
+button:hover {
+  transform: scale3d(1.1, 1.1, 1.1);
+}
+
+nav {
+  padding: 10px 10px 10px 0;
+}
+
+nav > ul {
+  display: flex;
+  justify-content: space-evenly;
+  list-style: none;
+  width: 428px;
+  color: var(--main-text-color);
+  padding-left: 51px;
+}
+
+li:nth-child(1) {
+  font-weight: 900;
+  border-bottom: 1px solid;
+  border-bottom-style: dotted;
+}
+
+@media only screen and (min-width: 320px) and (max-width: 667px) {
+  section {
+    flex-direction: column;
+  }
+  .is-medium,
+  .is-medium-half {
+    width: 100%;
+  }
+  .is-medium-half > img {
+    max-height: 300px;
+    padding-bottom: 50px;
+  }
+
+  h1 {
+    padding-top: 205px;
+  }
+  nav {
+    padding: 20px 0;
+  }
+  nav > ul {
+    width: 367px;
+    padding-left: 0;
+  }
+}
+@media only screen and (min-width: 1440px) and (max-width: 2560px) {
+  body {
+    background-size: 250px;
+  }
+
+  h1 {
+    font-size: 3rem;
+  }
+  p {
+    line-height: 32px;
+    font-size: 1.7rem;
+  }
+  .is-medium-half > img {
+    max-height: 850px;
+  }
+  nav > ul {
+    width: 590px;
+    padding-left: 116px;
+    font-size: 1.1rem;
+  }
+  button {
+    width: 175px;
+    height: 41px;
+    font-size: 1.1rem;
+  }
+}
